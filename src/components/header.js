@@ -1,63 +1,45 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import { Flex, Box, Container } from 'theme-ui'
 import { HomeIcon, ChevronLeftIcon, QuestionMarkCircledIcon } from '@radix-ui/react-icons';
 
 const Header = ({ siteTitle }) => (
 
-  <header
-    style={{
-      margin: `0 auto`,
-      padding: `1rem`,
-      background: `#222323`,
-    }}
+  <Box 
+    as="header" 
+    p={4} color="text" 
+    bg="muted"
   >
-    <div
-      className="container"
-      style={{
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: `space-between`,
-      }}
+    <Container 
+      p={4}
     >
+      <Flex 
+        sx={{ 
+          justifyContent: 'space-between' 
+        }}
+      >
+          <Link 
+            to="/">
+            <HomeIcon
+              color="white"
+            />
+          </Link>
+          <Link 
+            to="/">
+            <ChevronLeftIcon 
+              color="white"
+            />
+          </Link>
+          <Link 
+            to="/">
+            <QuestionMarkCircledIcon
+              color="white"
+            />
+          </Link>
+      </Flex>
+    </Container>
+  </Box>
 
-      <div>
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-            color: `#FFFFFF`,
-          }}
-        >
-          <HomeIcon />
-        </Link>
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-            color: `#FFFFFF`,
-          }}
-        >
-          <ChevronLeftIcon />
-        </Link>
-      </div>
-
-      <div>
-        <Link
-          to="/"
-          style={{
-            fontSize: `var(--font-sm)`,
-            textDecoration: `none`,
-            color: `#FFFFFF`,
-          }}
-        >
-          <QuestionMarkCircledIcon />
-        </Link>
-      </div>
-      
-    </div>
-  </header>
 )
 
 export default Header
