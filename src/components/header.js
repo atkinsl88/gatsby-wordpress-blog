@@ -7,17 +7,18 @@ const Header = ({ siteTitle }) => (
 
   <Box 
     as="header" 
-    p={4} color="text" 
-    bg="muted"
+    bg="#222323"
+    px="4"
   >
     <Container 
-      p={4}
+      p="4"
     >
       <Flex 
         sx={{ 
           justifyContent: 'space-between' 
         }}
       >
+        <Box>
           <Link 
             to="/">
             <HomeIcon
@@ -30,6 +31,7 @@ const Header = ({ siteTitle }) => (
               color="white"
             />
           </Link>
+        </Box>
           <Link 
             to="/">
             <QuestionMarkCircledIcon

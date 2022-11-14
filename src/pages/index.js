@@ -1,14 +1,20 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
-import HomepageFeatured from "../components/hp-featured"
+import Hero from "../components/Homepage/Hero"
+import News from "../components/Homepage/News"
+import Tutorials from "../components/Homepage/Tutorials"
+import More from "../components/Homepage/More"
 
 const IndexPage = () => (
 
   <Layout>
-    <HomepageFeatured />
+    <Hero />
+    <News />
+    <Tutorials />
+    <More />
   </Layout>
 
 )
