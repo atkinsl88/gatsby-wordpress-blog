@@ -1,13 +1,12 @@
 import * as React from "react"
-import { Flex, Box, Container, Text } from 'theme-ui'
+import { Flex, Box, Container } from 'theme-ui'
 
 const Footer = ({ siteTitle }) => (
 
   <Box 
     as="footer" 
-    p={4} 
-    color="text" 
-    bg="muted"
+    bg="#222323"
+    px="4"
   >
     <Container 
       as="header" 
@@ -18,7 +17,6 @@ const Footer = ({ siteTitle }) => (
           justifyContent: 'space-between' 
         }}
       >
-        <Text>Card</Text>
       </Flex>
     </Container>
   </Box>

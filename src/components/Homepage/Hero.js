@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Flex, Box, Container, Text } from 'theme-ui'
+import { Flex, Box, Container, Text, Image } from 'theme-ui'
+import image from "../../images/nyc.jpeg"
 
 import CardLarge from "../Cards/CardLarge"
 
@@ -13,11 +14,10 @@ const Hero = ({ siteTitle }) => (
     <Container
       p={4}
     >
-
       <Flex
         sx={{
           flexDirection: 'column',
-          paddingBottom: '4'
+          paddingBottom: '4',
         }}
       >
         <Text>News</Text>
@@ -29,13 +29,19 @@ const Hero = ({ siteTitle }) => (
       >
         <Box
           sx={{
-            width: '40%'
+            width: '60%'
           }}
         >
+          <Image 
+            sx={{ 
+              variant: 'cards.large.image' 
+            }}
+            src={image}
+          />
         </Box>
         <Flex
           sx={{
-            width: '60%',
+            width: '40%',
             flexDirection: 'column',
             justifyContent: 'space-between'
           }}

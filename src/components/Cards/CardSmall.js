@@ -4,10 +4,10 @@ import { Box, Card, Flex } from 'theme-ui'
 const CardSmall = ({ children, variant }) => (
 
   <Card
+    variant="small"
     sx={{
-      width: variant === "wide" ? "100%" : 256,
+      width: variant === "thin" ? "33%" : 256,
     }}
-    bg="#222323"
   >
     <Box>
       <Flex

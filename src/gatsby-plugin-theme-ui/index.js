@@ -4,23 +4,37 @@ const theme = {
   ...dark,
   fonts: {
     body: 'system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
+    heading: 'Poppins, sans-serif',
     monospace: 'Menlo, monospace',
   },
-  fontWeights: {
-    body: 400,
-    heading: 700,
-    bold: 700,
-  },
-  lineHeights: {
-    body: 1.5,
-    heading: 1.125,
-  },
   cards: {
-    primary: {
-      padding: 2,
+    large: {
+      backgroundColor: '#222323',
       borderRadius: 10,
-      boxShadow: '0 0 8px rgba(0, 0, 0, 0.125)',
+      image: {
+        borderBottomLeftRadius: 10,
+        borderTopLeftRadius: 10,
+      },
+    },
+    medium: {
+      backgroundColor: '#222323',
+      borderRadius: 10,
+      image: {
+        borderTopRightRadius: 10,
+        borderTopLeftRadius: 10,
+        objectFit: 'cover',
+        height: '300px',
+        width: '100%',
+      },
+    },
+    small: {
+      backgroundColor: '#222323',
+      borderRadius: 10,
+      image: {
+        borderRadius: 10,
+        objectFit: 'cover',
+        width: '400px',
+      },
     },
   },
 }

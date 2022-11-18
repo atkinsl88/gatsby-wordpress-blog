@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Flex, Box, Container, Text } from 'theme-ui'
+import { Flex, Box, Container, Text, Image } from 'theme-ui'
+import image from "../../images/nyc.jpeg"
 
 import CardMedium from "../Cards/CardMedium"
 import CardSmall from "../Cards/CardSmall"
@@ -11,7 +12,7 @@ const News = ({ siteTitle }) => (
     bg="#2d2d2e"
     px="4"
     pt="0"
-    pb="4"
+    pb="5"
   >
     <Container
     >
@@ -33,53 +34,15 @@ const News = ({ siteTitle }) => (
         pt="2"
       >
         <CardMedium
-          variant="wide"
+          variant="thin"
         >
           <Box>
-          </Box>
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column',
+            <Image 
+              src={image}
+              sx={{ 
+                variant: 'cards.medium.image' 
               }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-        </CardMedium>
-        <CardMedium
-          variant="wide"
-        >
-          <Box>
-          </Box>
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column'
-              }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-        </CardMedium>
-        <CardMedium
-          variant="wide"
-        >
-          <Box>
+            />
           </Box>
           <Flex
             sx={{
@@ -108,9 +71,8 @@ const News = ({ siteTitle }) => (
         px="4"
         pt="4"
       >
-
         <CardSmall
-          variant="wide"
+          variant="thin"
         >
           <Flex
             sx={{
@@ -131,59 +93,14 @@ const News = ({ siteTitle }) => (
           <Box
             p={4}
           >
-          </Box>
-        </CardSmall>
-
-        <CardSmall
-          variant="wide"
-        >
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column',
+            <Image 
+              src={image}
+              sx={{ 
+                variant: 'cards.small.image' 
               }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-          <Box
-            p={4}
-          >
+            />
           </Box>
         </CardSmall>
-
-        <CardSmall
-          variant="wide"
-        >
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column',
-              }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-          <Box
-            p={4}
-          >
-          </Box>
-        </CardSmall>
-
       </Flex>
     </Container>
       
