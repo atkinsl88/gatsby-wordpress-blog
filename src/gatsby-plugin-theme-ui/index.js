@@ -8,32 +8,12 @@ const theme = {
     monospace: 'Menlo, monospace',
   },
   cards: {
-    large: {
+    primary: {
       backgroundColor: '#222323',
       borderRadius: 10,
       image: {
         borderBottomLeftRadius: 10,
         borderTopLeftRadius: 10,
-      },
-    },
-    medium: {
-      backgroundColor: '#222323',
-      borderRadius: 10,
-      image: {
-        borderTopRightRadius: 10,
-        borderTopLeftRadius: 10,
-        objectFit: 'cover',
-        height: '300px',
-        width: '100%',
-      },
-    },
-    small: {
-      backgroundColor: '#222323',
-      borderRadius: 10,
-      image: {
-        borderRadius: 10,
-        objectFit: 'cover',
-        width: '400px',
       },
     },
   },
