@@ -1,111 +1,43 @@
 import * as React from "react"
-import { Flex, Box, Container, Text, Image } from 'theme-ui'
-import image from "../../images/nyc.jpeg"
+import { Box, Container, Text, Flex } from "theme-ui"
 
-import CardMedium from "../Cards/CardMedium"
-import CardSmall from "../Cards/CardSmall"
+import Card from "../Cards/Card"
 
-const News = ({ siteTitle }) => (
-
-  <Box 
-    color="text" 
-    bg="#2d2d2e"
-    px="4"
-    pt="0"
-    pb="5"
-  >
-    <Container
-    >
+const Tutorials = ({ postData }) => (
+  <Box color="text" p="4" bg="gray">
+    <Container px="4" py="0">
       <Flex
         sx={{
-          flexDirection: 'column',
+          margin: "3rem 0",
+          alignContent: "center",
         }}
-        p="4"
       >
-        <Text>Tutorial</Text>
+        <Text>Tutorials</Text>
       </Flex>
       <Flex
         sx={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          gap: '4',
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          gap: "1rem",
         }}
-        px="4"
-        pt="2"
       >
-        <CardMedium
-          variant="thin"
-        >
-          <Box>
-            <Image 
-              src={image}
-              sx={{ 
-                variant: 'cards.medium.image' 
-              }}
-            />
-          </Box>
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column',
-              }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-        </CardMedium>
-      </Flex>
-      <Flex
-        sx={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          gap: '4'
-        }}
-        px="4"
-        pt="4"
-      >
-        <CardSmall
-          variant="thin"
-        >
-          <Flex
-            sx={{
-              flexDirection: 'column',
-              justifyContent: 'space-between'
-            }}
-            p={4}
-          >
-            <Flex
-              sx={{
-                flexDirection: 'column',
-              }}
-            >
-              <Text>Curabitur viverra, nulla bibendum interdum cursus</Text>
-            </Flex>
-              <Text>14 October 2022</Text>
-          </Flex>
-          <Box
-            p={4}
-          >
-            <Image 
-              src={image}
-              sx={{ 
-                variant: 'cards.small.image' 
-              }}
-            />
-          </Box>
-        </CardSmall>
+        {postData.map((data, index) => {
+          console.log(data)
+          return (
+            <>
+              <Card
+                variant="thin"
+                image={data.tutorials_image.tutorialImage.gatsbyImage}
+                title={data.title}
+                date={data.date}
+              />
+            </>
+          )
+        })}
       </Flex>
     </Container>
-      
   </Box>
-
 )
 
-export default News
+export default Tutorials

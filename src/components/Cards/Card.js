@@ -1,25 +1,34 @@
 import * as React from "react"
-import { Box, Card, Text } from "theme-ui"
+import { Flex, Card, Text } from "theme-ui"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const CardMedium = ({ title, date, image, variant }) => (
   <Card
-    variant="primary"
     bg="muted"
     sx={{
-      width: variant === "thin" ? "32%" : 256,
+      width: variant === "thin" ? "24%" : 256,
+      marginBottom: "1rem",
     }}
   >
     <GatsbyImage
-      image={image}
       sx={{
-        variant: "cards.large.image",
+        borderTopLeftRadius: "10px",
+        borderTopRightRadius: "10px",
+        width: "100%",
       }}
+      image={image}
     />
-    <Box>
-      <Text>{date}</Text>
+    <Flex
+      sx={{
+        flexDirection: "column",
+        justifyContent: "space-between",
+        minHeight: "200px",
+      }}
+      p="4"
+    >
       <Text>{title}</Text>
-    </Box>
+      <Text>{date}</Text>
+    </Flex>
   </Card>
 )
 

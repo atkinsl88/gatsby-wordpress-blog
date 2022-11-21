@@ -8,7 +8,7 @@ export const usePostNewsTeaserQuery = () => {
           edges {
             node {
               title
-              date
+              date(formatString: "DD MMMM YYYY")
               news_image {
                 newsImage {
                   gatsbyImage(width: 500)
