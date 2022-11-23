@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const usePostNewsTeaserQuery = () => {
+export const usePostNewsLowerQuery = () => {
   const { allWpNew } = useStaticQuery(
     graphql`
-      query PostNewsTeaserQuery {
-        allWpNew(sort: {date: DESC}) {
+      query PostNewsLowerQuery {
+        allWpNew(limit: 6, skip: 4, sort: {date: DESC}) {
           edges {
             node {
               title

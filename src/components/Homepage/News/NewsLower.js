@@ -1,30 +1,17 @@
 import * as React from "react"
-import { Box, Container, Text, Flex } from "theme-ui"
+import { Box, Text, Container, Flex } from "theme-ui"
 
-import Card from "../Cards/Card"
+import Card from "../../Cards/CardSmall"
 
-const News = ({ postData }) => (
-  <Box color="text">
-    <Container>
-      <Flex
-        sx={{
-          margin: "3rem 0",
-          alignContent: "center",
-        }}
-      >
-        <Text 
-          sx={{
-            fontSize: 5,
-            fontWeight: 'body',
-          }}
-          >News</Text>
-      </Flex>
+const NewsLower = ({ postData }) => (
+  <Box color="text" px="6">
+    <Container px="4">
       <Flex
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "flex-start",
-          gap: "1rem",
+          gap: "3",
         }}
       >
         {postData.map((data, index) => {
@@ -40,8 +27,22 @@ const News = ({ postData }) => (
           )
         })}
       </Flex>
+      <Flex
+        sx={{
+          justifyContent: "flex-end",
+        }}
+        py="4"
+      >
+        <Text
+          sx={{
+            fontSize: "2",
+          }}
+        >
+          Read more News
+        </Text>
+      </Flex>
     </Container>
   </Box>
 )
 
-export default News
+export default NewsLower

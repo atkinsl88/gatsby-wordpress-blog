@@ -1,25 +1,17 @@
 import * as React from "react"
 import { Box, Container, Text, Flex } from "theme-ui"
 
-import Card from "../Cards/Card"
+import Card from "../../Cards/CardSmall"
 
-const Tutorials = ({ postData }) => (
-  <Box color="text" p="4" bg="gray">
-    <Container px="4" py="0">
-      <Flex
-        sx={{
-          margin: "3rem 0",
-          alignContent: "center",
-        }}
-      >
-        <Text>Tutorials</Text>
-      </Flex>
+const TutorialsLower = ({ postData }) => (
+  <Box color="text" px="6" bg="#2d2d2e">
+    <Container px="4">
       <Flex
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "flex-start",
-          gap: "1rem",
+          gap: '3',
         }}
       >
         {postData.map((data, index) => {
@@ -36,8 +28,22 @@ const Tutorials = ({ postData }) => (
           )
         })}
       </Flex>
+      <Flex
+        sx={{
+          justifyContent: "flex-end",
+        }}
+        py="4"
+      >
+        <Text
+          sx={{
+            fontSize: "2",
+          }}
+        >
+          Read more Tutorials
+        </Text>
+      </Flex>
     </Container>
   </Box>
 )
 
-export default Tutorials
+export default TutorialsLower

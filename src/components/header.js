@@ -8,7 +8,7 @@ import {
 } from "@radix-ui/react-icons"
 
 const Header = ({ siteTitle }) => (
-  <Box as="header" bg="#222323" px="4">
+  <Box as="header" bg="#222323" px="6">
     <Container p="4">
       <Flex
         sx={{

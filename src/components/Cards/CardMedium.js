@@ -6,18 +6,11 @@ const CardMedium = ({ title, date, image, variant }) => (
   <Card
     bg="muted"
     sx={{
-      width: variant === "thin" ? "24%" : 256,
+      width: variant === "thin" ? "32.5%" : 256,
       marginBottom: "1rem",
     }}
   >
-    <GatsbyImage
-      sx={{
-        borderTopLeftRadius: "10px",
-        borderTopRightRadius: "10px",
-        width: "100%",
-      }}
-      image={image}
-    />
+    <GatsbyImage image={image} />
     <Flex
       sx={{
         flexDirection: "column",
