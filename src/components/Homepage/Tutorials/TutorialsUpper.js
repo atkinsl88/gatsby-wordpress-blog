@@ -4,7 +4,16 @@ import { Box, Container, Text, Flex } from "theme-ui"
 import Card from "../../Cards/CardMedium"
 
 const TutorialsUpper = ({ postData }) => (
-  <Box color="text" px="6" bg="#2d2d2e">
+  <Box
+    color="text"
+    bg="#2d2d2e"
+    sx={{
+      padding: "0",
+      "@media screen and (min-width: 768px)": {
+        padding: "0 4rem",
+      },
+    }}
+  >
     <Container px="4">
       <Box py="4">
         <Text
@@ -20,7 +29,6 @@ const TutorialsUpper = ({ postData }) => (
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "flex-start",
-          gap: '3',
         }}
       >
         {postData.map((data, index) => {

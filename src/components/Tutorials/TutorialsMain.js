@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Box, Text, Container, Flex } from "theme-ui"
+import { Box, Text, Container, Link, Flex } from "theme-ui"
 
-import Card from "../../Cards/CardSmall"
+import Card from "../Cards/CardSmall"
 
-const NewsLower = ({ postData }) => (
+const TutorialsMain = ({ postData }) => (
   <Box
     color="text"
     sx={{
@@ -20,7 +20,7 @@ const NewsLower = ({ postData }) => (
             fontSize: "4",
           }}
         >
-          More News
+          Tutorials
         </Text>
       </Box>
       <Flex
@@ -31,11 +31,12 @@ const NewsLower = ({ postData }) => (
         }}
       >
         {postData.map((data, index) => {
+          console.log(data)
           return (
             <>
               <Card
                 variant="thin"
-                image={data.news_image.newsImage.gatsbyImage}
+                image={data.tutorials_image.tutorialImage.gatsbyImage}
                 title={data.title}
                 date={data.date}
               />
@@ -43,8 +44,23 @@ const NewsLower = ({ postData }) => (
           )
         })}
       </Flex>
+      <Flex
+        sx={{
+          justifyContent: "flex-end",
+        }}
+        py="4"
+      >
+        <Link
+          href="/tutorials"
+          sx={{
+            fontSize: "2",
+          }}
+        >
+          Read more Tutorials
+        </Link>
+      </Flex>
     </Container>
   </Box>
 )
 
-export default NewsLower
+export default TutorialsMain

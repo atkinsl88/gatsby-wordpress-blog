@@ -4,7 +4,7 @@ export const usePostNewsMoreQuery = () => {
   const { allWpNew } = useStaticQuery(
     graphql`
       query PostNewsMoreQuery {
-        allWpNew(skip: 10, sort: {date: DESC}) {
+        allWpNew(skip: 8, sort: {date: DESC}) {
           edges {
             node {
               title

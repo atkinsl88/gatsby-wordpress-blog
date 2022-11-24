@@ -6,13 +6,17 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
   <Card
     bg="muted"
     sx={{
-      width: variant === "wide" ? "100%" : 256,
+      width: "100%",
       marginBottom: "1rem",
+      borderRadius: "15px",
     }}
   >
     <Flex
       sx={{
-        flexDirection: "row",
+        flexDirection: "column",
+        "@media screen and (min-width: 768px)": {
+          flexDirection: "row",
+        },
       }}
     >
       <GatsbyImage image={image} />
@@ -21,7 +25,10 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
           flexDirection: "column",
           justifyContent: "space-between",
           minHeight: "200px",
-          width: "50%",
+          width: "100%",
+          "@media screen and (min-width: 768px)": {
+            width: "50%",
+          },
         }}
         p="4"
       >
@@ -30,10 +37,30 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
             flexDirection: "column",
           }}
         >
-          <Text>{title}</Text>
-          <Text>{excerpt}</Text>
+          <Text
+            sx={{
+              variant: "text.heading",
+              fontSize: "1.5rem",
+            }}
+          >
+            {title}
+          </Text>
+          <Text
+            sx={{
+              variant: "text.body",
+            }}
+          >
+            {excerpt}
+          </Text>
         </Flex>
-        <Text>{date}</Text>
+        <Text
+          sx={{
+            variant: "text.body",
+            fontSize: "0.875rem",
+          }}
+        >
+          {date}
+        </Text>
       </Flex>
     </Flex>
   </Card>

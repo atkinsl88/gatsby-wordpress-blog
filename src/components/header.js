@@ -8,8 +8,17 @@ import {
 } from "@radix-ui/react-icons"
 
 const Header = ({ siteTitle }) => (
-  <Box as="header" bg="#222323" px="6">
-    <Container p="4">
+  <Box
+    as="header"
+    bg="#222323"
+    sx={{
+      padding: "0",
+      "@media screen and (min-width: 768px)": {
+        padding: "2rem 4rem",
+      },
+    }}
+  >
+    <Container px="4">
       <Flex
         sx={{
           justifyContent: "space-between",

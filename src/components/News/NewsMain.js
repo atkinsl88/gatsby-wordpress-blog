@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Box, Text, Container, Flex } from "theme-ui"
+import { Box, Text, Link, Container, Flex } from "theme-ui"
 
-import Card from "../../Cards/CardSmall"
+import Card from "../Cards/CardSmall"
 
-const NewsLower = ({ postData }) => (
+const NewsMain = ({ postData }) => (
   <Box
     color="text"
     sx={{
@@ -20,7 +20,7 @@ const NewsLower = ({ postData }) => (
             fontSize: "4",
           }}
         >
-          More News
+          News
         </Text>
       </Box>
       <Flex
@@ -43,8 +43,23 @@ const NewsLower = ({ postData }) => (
           )
         })}
       </Flex>
+      <Flex
+        sx={{
+          justifyContent: "flex-end",
+        }}
+        py="4"
+      >
+        <Link
+          href="/news"
+          sx={{
+            fontSize: "2",
+          }}
+        >
+          Read more News
+        </Link>
+      </Flex>
     </Container>
   </Box>
 )
 
-export default NewsLower
+export default NewsMain

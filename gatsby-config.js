@@ -43,8 +43,25 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://localhost/wordpress-blog/graphql`
+        url: `http://hy-de.com/graphql`
       },
-    }
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `Open Sans`,
+            file: `https://fonts.googleapis.com/css?family=Open+Sans`,
+          },
+          {
+            name: `Raleway`,
+            file: `https://fonts.googleapis.com/css?family=Raleway:300,400`,
+          },
+        ],
+      },
+    },
   ],
 }

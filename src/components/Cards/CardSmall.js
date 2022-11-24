@@ -1,13 +1,17 @@
 import * as React from "react"
-import { Flex, Card, Text } from "theme-ui"
+import { Flex, Box, Card, Text } from "theme-ui"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const CardSmall = ({ title, date, image, variant }) => (
   <Card
     bg="muted"
     sx={{
-      width: variant === "thin" ? "32.5%" : 256,
+      width: "100%",
+      "@media screen and (min-width: 768px)": {
+        width: "33.3%",
+      },
       marginBottom: "1rem",
+      borderRadius: "15px",
     }}
   >
     <Flex p="4">
@@ -16,14 +20,33 @@ const CardSmall = ({ title, date, image, variant }) => (
           flexDirection: "column",
           justifyContent: "space-between",
           minHeight: "200px",
+          width: "50%",
         }}
       >
-        <Text>{title}</Text>
-        <Text>{date}</Text>
+        <Text
+          sx={{
+            variant: "text.heading",
+            fontSize: "1rem",
+          }}
+        >
+          {title}
+        </Text>
+        <Text
+          sx={{
+            variant: "text.body",
+            fontSize: "0.875rem",
+          }}
+        >
+          {date}
+        </Text>
       </Flex>
-      <GatsbyImage
-        image={image}
-      />
+      <Box
+        sx={{
+          width: "50%",
+        }}
+      >
+        <GatsbyImage image={image} />
+      </Box>
     </Flex>
   </Card>
 )

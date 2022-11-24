@@ -1,15 +1,18 @@
 import * as React from "react"
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
 
-import { usePostNewsFeaturedQuery } from "../components/hooks/usePostNewsFeaturedQuery"
-import { usePostNewsUpperQuery } from "../components/hooks/usePostNewsUpperQuery"
-import { usePostNewsLowerQuery } from "../components/hooks/usePostNewsLowerQuery"
-import { usePostTutorialsUpperQuery } from "../components/hooks/usePostTutorialsUpperQuery"
-import { usePostTutorialsLowerQuery } from "../components/hooks/usePostTutorialsLowerQuery"
-import { usePostNewsMoreQuery } from "../components/hooks/usePostNewsMoreQuery"
+import { usePostNewsFeaturedQuery } from "../components/hooks/Homepage/usePostNewsFeaturedQuery"
+import { usePostNewsUpperQuery } from "../components/hooks/Homepage/usePostNewsUpperQuery"
+import { usePostNewsLowerQuery } from "../components/hooks/Homepage/usePostNewsLowerQuery"
+import { usePostTutorialsUpperQuery } from "../components/hooks/Homepage/usePostTutorialsUpperQuery"
+import { usePostTutorialsLowerQuery } from "../components/hooks/Homepage/usePostTutorialsLowerQuery"
+import { usePostNewsMoreQuery } from "../components/hooks/Homepage/usePostNewsMoreQuery"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
+import Intro from "../components/Homepage/Intro"
 import NewsFeatured from "../components/Homepage/News/NewsFeatured"
 import NewsUpper from "../components/Homepage/News/NewsUpper"
 import NewsLower from "../components/Homepage/News/NewsLower"
@@ -27,6 +30,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <script src={withPrefix('script.js')} type="text/javascript" />
+      </Helmet>
+      <Intro />
       <NewsFeatured postData={newsFeatured} />
       <NewsUpper postData={newsUpper} />
       <NewsLower postData={newsLower} />

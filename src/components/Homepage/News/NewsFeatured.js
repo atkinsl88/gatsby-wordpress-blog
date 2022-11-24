@@ -1,20 +1,19 @@
 import * as React from "react"
-import { Box, Text, Container, Flex } from "theme-ui"
+import { Box, Container, Flex } from "theme-ui"
 
 import Card from "../../Cards/CardLarge"
 
 const NewsFeatured = ({ postData }) => (
-  <Box color="text" px="6">
+  <Box
+    color="text"
+    sx={{
+      padding: "0",
+      "@media screen and (min-width: 768px)": {
+        padding: "0 4rem",
+      },
+    }}
+  >
     <Container px="4">
-      <Box py="4">
-        <Text
-          sx={{
-            fontSize: "4",
-          }}
-        >
-          News
-        </Text>
-      </Box>
       <Flex
         sx={{
           flexDirection: "row",

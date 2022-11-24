@@ -11,6 +11,7 @@
     "@theme-ui/mdx": "^0.15.3",
     "@theme-ui/presets": "^0.15.3",
     "gatsby": "^5.0.0",
+    "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
@@ -20,6 +21,7 @@
     "gatsby-transformer-sharp": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "theme-ui": "^0.15.3"
   },
   "devDependencies": {

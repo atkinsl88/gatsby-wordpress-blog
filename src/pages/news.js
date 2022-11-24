@@ -1,19 +1,22 @@
 import * as React from "react"
-import { Link } from "gatsby"
+
+import { usePostNewsMainQuery } from "../components/hooks/News/usePostNewsMainQuery"
 
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-const news = () => (
+import NewsMain from "../components/News/NewsMain"
 
-  <Layout>
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+const NewsPage = () => {
+  const newsMain = usePostNewsMainQuery()
+
+  return (
+    <Layout>
+      <NewsMain postData={newsMain} />
+    </Layout>
+  )
   
-)
+  }
 
 export const Head = () => <Seo title="Page two" />
-
-export default news
+export default NewsPage

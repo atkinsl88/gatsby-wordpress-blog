@@ -4,7 +4,7 @@ export const usePostNewsLowerQuery = () => {
   const { allWpNew } = useStaticQuery(
     graphql`
       query PostNewsLowerQuery {
-        allWpNew(limit: 6, skip: 4, sort: {date: DESC}) {
+        allWpNew(limit: 3, skip: 4, sort: {date: DESC}) {
           edges {
             node {
               title

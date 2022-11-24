@@ -1,10 +1,10 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const usePostTutorialsLowerQuery = () => {
+export const usePostTutorialsMainQuery = () => {
   const { allWpTutorial } = useStaticQuery(
     graphql`
-      query PostTutorialsLowerQuery {
-        allWpTutorial(limit: 6, skip: 3, sort: {date: DESC}) {
+      query PostTutorialsMainQuery {
+        allWpTutorial(sort: {date: DESC}) {
           edges {
             node {
               title

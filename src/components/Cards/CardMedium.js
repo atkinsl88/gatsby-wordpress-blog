@@ -6,8 +6,12 @@ const CardMedium = ({ title, date, image, variant }) => (
   <Card
     bg="muted"
     sx={{
-      width: variant === "thin" ? "32.5%" : 256,
+      width: "100%",
+      "@media screen and (min-width: 768px)": {
+        width: "33.3%",
+      },
       marginBottom: "1rem",
+      borderRadius: "15px",
     }}
   >
     <GatsbyImage image={image} />
@@ -19,8 +23,22 @@ const CardMedium = ({ title, date, image, variant }) => (
       }}
       p="4"
     >
-      <Text>{title}</Text>
-      <Text>{date}</Text>
+      <Text
+        sx={{
+          variant: "text.heading",
+          fontSize: "1.25rem",
+        }}
+      >
+        {title}
+      </Text>
+      <Text
+        sx={{
+          variant: "text.body",
+          fontSize: "0.875rem",
+        }}
+      >
+        {date}
+      </Text>
     </Flex>
   </Card>
 )
