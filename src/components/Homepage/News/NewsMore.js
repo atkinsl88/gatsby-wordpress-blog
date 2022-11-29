@@ -24,10 +24,12 @@ const NewsLower = ({ postData }) => (
         </Text>
       </Box>
       <Flex
+        pb="5"
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "flex-start",
+          gap: "1rem",
         }}
       >
         {postData.map((data, index) => {

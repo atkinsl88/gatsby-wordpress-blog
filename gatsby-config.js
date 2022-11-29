@@ -43,7 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://hy-de.com/graphql`
+        url: `http://localhost/wordpress-blog/graphql`
       },
     },
     {

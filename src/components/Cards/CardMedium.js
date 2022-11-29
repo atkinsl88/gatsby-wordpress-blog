@@ -8,7 +8,7 @@ const CardMedium = ({ title, date, image, variant }) => (
     sx={{
       width: "100%",
       "@media screen and (min-width: 768px)": {
-        width: "33.3%",
+        width: "32.5%",
       },
       marginBottom: "1rem",
       borderRadius: "15px",

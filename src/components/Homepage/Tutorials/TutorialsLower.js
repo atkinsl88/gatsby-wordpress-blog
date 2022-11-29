@@ -20,6 +20,7 @@ const TutorialsLower = ({ postData }) => (
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "flex-start",
+          gap: "1rem",
         }}
       >
         {postData.map((data, index) => {
