@@ -6,7 +6,7 @@ import Card from "../../Cards/CardSmall"
 const TutorialsLower = ({ postData }) => (
   <Box
     color="text"
-    bg="#2d2d2e"
+    bg="muted"
     sx={{
       padding: "0",
       "@media screen and (min-width: 768px)": {
@@ -19,8 +19,8 @@ const TutorialsLower = ({ postData }) => (
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "flex-start",
-          gap: "1rem",
+          justifyContent: "space-between",
+          gap: "2"
         }}
       >
         {postData.map((data, index) => {
@@ -31,6 +31,7 @@ const TutorialsLower = ({ postData }) => (
                 variant="thin"
                 image={data.tutorials_image.tutorialImage.gatsbyImage}
                 title={data.title}
+                uri={data.uri}
                 date={data.date}
               />
             </>

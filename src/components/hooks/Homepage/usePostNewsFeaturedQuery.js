@@ -8,11 +8,12 @@ export const usePostNewsFeaturedQuery = () => {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               excerpt
               news_image {
                 newsImage {
-                  gatsbyImage(width: 800)
+                  gatsbyImage(width: 1000)
                 }
               }
             }

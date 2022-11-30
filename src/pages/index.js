@@ -1,6 +1,7 @@
 import * as React from "react"
 import Helmet from "react-helmet"
 import { withPrefix } from "gatsby"
+import "../styles/style.css"
 
 import { usePostNewsFeaturedQuery } from "../components/hooks/Homepage/usePostNewsFeaturedQuery"
 import { usePostNewsUpperQuery } from "../components/hooks/Homepage/usePostNewsUpperQuery"

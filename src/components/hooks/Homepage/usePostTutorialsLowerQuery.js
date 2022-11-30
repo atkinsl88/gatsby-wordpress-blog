@@ -4,10 +4,11 @@ export const usePostTutorialsLowerQuery = () => {
   const { allWpTutorial } = useStaticQuery(
     graphql`
       query PostTutorialsLowerQuery {
-        allWpTutorial(limit: 3, skip: 3, sort: {date: DESC}) {
+        allWpTutorial(limit: 6, skip: 3, sort: {date: DESC}) {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               tutorials_image {
                 tutorialImage {

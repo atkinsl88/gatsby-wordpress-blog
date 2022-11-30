@@ -8,10 +8,11 @@ export const usePostTutorialsUpperQuery = () => {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               tutorials_image {
                 tutorialImage {
-                  gatsbyImage(width: 500)
+                  gatsbyImage(width: 900)
                 }
               }
             }

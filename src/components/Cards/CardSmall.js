@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Flex, Box, Card, Text } from "theme-ui"
+import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const CardSmall = ({ title, date, image, variant }) => (
+const CardSmall = ({ title, date, image, uri, variant }) => (
   <Card
     bg="muted"
     sx={{
@@ -14,40 +15,45 @@ const CardSmall = ({ title, date, image, variant }) => (
       borderRadius: "15px",
     }}
   >
-    <Flex p="4">
-      <Flex
-        sx={{
-          flexDirection: "column",
-          justifyContent: "space-between",
-          minHeight: "200px",
-          width: "50%",
-        }}
-      >
-        <Text
+    <Link to={uri}>
+      <Flex p="4">
+        <Flex
           sx={{
-            variant: "text.heading",
-            fontSize: "1rem",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            minHeight: "200px",
+            width: "50%",
           }}
         >
-          {title}
-        </Text>
-        <Text
+          <Text
+            pr="4"
+            sx={{
+              variant: "text.heading",
+              color: "text",
+              fontSize: "1rem",
+            }}
+          >
+            {title}
+          </Text>
+          <Text
+            sx={{
+              variant: "text.body",
+              color: "text",
+              fontSize: "0.875rem",
+            }}
+          >
+            {date}
+          </Text>
+        </Flex>
+        <Box
           sx={{
-            variant: "text.body",
-            fontSize: "0.875rem",
+            width: "50%",
           }}
         >
-          {date}
-        </Text>
+          <GatsbyImage image={image} />
+        </Box>
       </Flex>
-      <Box
-        sx={{
-          width: "50%",
-        }}
-      >
-        <GatsbyImage image={image} />
-      </Box>
-    </Flex>
+    </Link>
   </Card>
 )
 

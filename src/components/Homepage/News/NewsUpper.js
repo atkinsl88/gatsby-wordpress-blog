@@ -18,8 +18,8 @@ const NewsUpper = ({ postData }) => (
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "flex-start",
-          gap: "1rem",
+          justifyContent: "space-between",
+          gap: "2"
         }}
       >
         {postData.map((data, index) => {
@@ -29,6 +29,7 @@ const NewsUpper = ({ postData }) => (
                 variant="thin"
                 image={data.news_image.newsImage.gatsbyImage}
                 title={data.title}
+                uri={data.uri}
                 date={data.date}
               />
             </>

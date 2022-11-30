@@ -10,7 +10,7 @@ import {
 const Header = ({ siteTitle }) => (
   <Box
     as="header"
-    bg="#222323"
+    bg="muted"
     sx={{
       padding: "0",
       "@media screen and (min-width: 768px)": {

@@ -27,7 +27,8 @@ const TutorialsMain = ({ postData }) => (
         sx={{
           flexDirection: "row",
           flexWrap: "wrap",
-          justifyContent: "flex-start",
+          justifyContent: "space-between",
+          gap: "2"
         }}
       >
         {postData.map((data, index) => {
@@ -38,6 +39,7 @@ const TutorialsMain = ({ postData }) => (
                 variant="thin"
                 image={data.tutorials_image.tutorialImage.gatsbyImage}
                 title={data.title}
+                uri={data.uri}
                 date={data.date}
               />
             </>

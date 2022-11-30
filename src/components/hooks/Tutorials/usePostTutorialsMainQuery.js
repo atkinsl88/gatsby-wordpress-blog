@@ -8,6 +8,7 @@ export const usePostTutorialsMainQuery = () => {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               tutorials_image {
                 tutorialImage {

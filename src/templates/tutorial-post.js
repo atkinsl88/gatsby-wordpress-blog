@@ -6,7 +6,7 @@ import { Box, Container, Text } from "theme-ui"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-const BlogPostTemplate = ({ data: { post } }) => {
+const TutorialPostTemplate = ({ data: { post } }) => {
   return (
     <Layout>
       <Box
@@ -35,17 +35,16 @@ export const Head = ({ data: { post } }) => (
   <Seo title={post.title} description={post.excerpt} />
 )
 
-export default BlogPostTemplate
+export default TutorialPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostById(
+  query TutorialPostById(
     $id: String!
     $previousPostId: String
     $nextPostId: String
   ) {
-    post: wpNew(id: { eq: $id }) {
+    post: wpTutorial(id: { eq: $id }) {
       id
-      excerpt
       content
       title
       date(formatString: "MMMM DD, YYYY")

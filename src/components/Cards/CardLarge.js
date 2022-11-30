@@ -38,9 +38,11 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
           }}
         >
           <Text
+            mb="3"
             sx={{
               variant: "text.heading",
               fontSize: "1.5rem",
+              color: "text",
             }}
           >
             {title}
@@ -48,6 +50,7 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
           <Text
             sx={{
               variant: "text.body",
+              color: "text",
             }}
           >
             {excerpt}
@@ -56,6 +59,7 @@ const CardLarge = ({ title, excerpt, date, image, variant }) => (
         <Text
           sx={{
             variant: "text.body",
+            color: "text",
             fontSize: "0.875rem",
           }}
         >

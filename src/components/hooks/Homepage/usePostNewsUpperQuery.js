@@ -8,10 +8,11 @@ export const usePostNewsUpperQuery = () => {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               news_image {
                 newsImage {
-                  gatsbyImage(width: 500)
+                  gatsbyImage(width: 900)
                 }
               }
             }

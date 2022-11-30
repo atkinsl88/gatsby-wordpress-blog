@@ -8,6 +8,7 @@ export const usePostNewsMainQuery = () => {
           edges {
             node {
               title
+              uri
               date(formatString: "DD MMMM YYYY")
               news_image {
                 newsImage {

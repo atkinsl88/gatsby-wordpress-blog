@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Box, Container, Flex } from "theme-ui"
+import { Link } from "gatsby"
 
 import Card from "../../Cards/CardLarge"
 
@@ -23,7 +24,7 @@ const NewsFeatured = ({ postData }) => (
       >
         {postData.map((data, index) => {
           return (
-            <>
+            <Link to={data.uri} >
               <Card
                 variant="wide"
                 image={data.news_image.newsImage.gatsbyImage}
@@ -31,7 +32,7 @@ const NewsFeatured = ({ postData }) => (
                 excerpt={data.excerpt}
                 date={data.date}
               />
-            </>
+            </Link>
           )
         })}
       </Flex>
